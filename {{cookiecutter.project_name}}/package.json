@@ -1,0 +1,29 @@
+{
+  "name": "{{cookiecutter.project_name}}",
+  "version": "{{cookiecutter.version}}",
+  "description": "{{cookiecutter.description}}",
+  "main": "dist/index.js",
+  "repository": "{{cookiecutter.repository_url}}",
+  "author": "{{cookiecutter.author}}",
+  "license": "{{cookiecutter.license}}",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.37",
+    "@babel/preset-env": "^7.0.0-beta.37",
+    "babel-loader": "8.0.0-beta.0",
+    "css-loader": "^0.28.8",
+    "rimraf": "^2.6.2",
+    "vue-loader": "^13.7.0",
+    "vue-template-compiler": "^2.5.13",
+    "webpack": "^3.10.0",
+    "webpack-merge": "^4.1.1"
+  },
+  "scripts": {
+    "watch": "rimraf ./dist && webpack --watch --config ./webpack.dev.js",
+    "build": "rimraf ./dist && webpack --config ./webpack.prod.js"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  }
+}
